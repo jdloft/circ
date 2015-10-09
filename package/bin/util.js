@@ -11,7 +11,7 @@
     ISSUES_URL: 'https://github.com/flackr/circ/issues',
 
     // Should match the version in the manifest.
-    VERSION: '0.6.6'
+    VERSION: '0.6.7'
   };
 
   /*
@@ -359,7 +359,7 @@
    */
   exports.loadFromFileSystem = function(callback) {
     var _this = this;
-    return chrome.fileSystem.chooseFile({
+    return chrome.fileSystem.chooseEntry({
       type: 'openFile'
     }, function(fileEntry) {
       if (!fileEntry) {
