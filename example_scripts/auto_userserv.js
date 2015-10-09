@@ -42,7 +42,7 @@ handlePrivateMessage = function(e) {
     snoopPassword(e.context, message);
     return hideUserServPassword(e);
   }
-  return propgate(e);
+  return propagate(e);
 };
 
 shouldAutoIdentify = function(context, message) {
@@ -63,7 +63,7 @@ autoIdentify = function(context, message) {
 userServPasswordIsVisible = function(message) {
   var cmd, pass, ref, user;
   ref = message.split(' '), cmd = ref[0], user = ref[1], pass = ref[2];
-  return words.length === 3 && words[0].toLowerCase === 'login';
+  return pass && cmd.toLowerCase === 'login';
 };
 
 snoopPassword = function(context, message) {

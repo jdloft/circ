@@ -37,7 +37,7 @@ handlePrivateMessage = (e) ->
 
     return hideUserServPassword e
 
-  propgate e
+  propagate e
 
 shouldAutoIdentify = (context, message) ->
   haveCredsFor context.server
@@ -54,7 +54,7 @@ autoIdentify = (context, message) ->
 userServPasswordIsVisible = (message) ->
   [cmd, user, pass] = message.split ' '
 
-  words.length is 3 and words[0].toLowerCase is 'login'
+  pass and cmd.toLowerCase is 'login'
 
 snoopPassword = (context, message) ->
   [cmd, user, pass] = message.split ' '

@@ -359,7 +359,7 @@
    */
   exports.loadFromFileSystem = function(callback) {
     var _this = this;
-    return chrome.fileSystem.chooseFile({
+    return chrome.fileSystem.chooseEntry({
       type: 'openFile'
     }, function(fileEntry) {
       if (!fileEntry) {
