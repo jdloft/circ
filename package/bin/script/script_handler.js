@@ -285,7 +285,7 @@
           type = event.type.slice(5);
           return script.beginHandlingType(type, event.name);
         case 'command':
-        case 'sevrer':
+        case 'server':
         case 'message':
           return this._emitEvent(Event.wrap(event));
         case 'propagate':
